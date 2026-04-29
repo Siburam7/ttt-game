@@ -355,5 +355,11 @@ body {
     width: 25%;
 }
 
+/* option no start here */
+
+.option-no {
+    display: none;
+}
+
 
 

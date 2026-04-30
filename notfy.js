@@ -11,6 +11,9 @@ let countX = document.querySelector(".count-x");
 let countTie = document.querySelector(".count-tie");
 let countO = document.querySelector(".count-o");
 let optionNo = document.querySelector(".option-no");
+let darkNav = document.querySelector(".dark");
+let lightNav = document.querySelector(".light");
+let body = document.querySelector("body");
 
 
 let turnX = true;
@@ -177,7 +180,17 @@ const countWin = () => {
    };
 };
 
-console.log(count);
+// light All background
+
+lightNav.addEventListener("click", () => {
+    body.classList.add("bodyx");
+})
+
+// dark all background
+
+darkNav.addEventListener("click", () => {
+    body.classList.remove("bodyx");
+})
 
 
 

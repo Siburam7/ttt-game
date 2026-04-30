@@ -362,4 +362,85 @@ body {
 }
 
 
+/* light background start here */
+
+
+
+
+
+.bodyx {
+    background-color: white;
+    color: #091413;
+
+
+.boox-a1, .boox-a2, .boox-a3 {
+    background-color: #091413;
+    color: #fff;
+}
+
+.slc0 {
+    box-shadow: inset -6px -6px 0 #091413;
+}
+
+.slc1 {
+    box-shadow: inset -6px -6px 0 #091413;
+}
+
+.slc2 {
+    box-shadow: inset 0 -6px 0 #091413;
+}
+
+
+.slc3 {
+    box-shadow: inset -6px -6px 0 #091413;
+}
+
+.slc4 {
+    box-shadow: inset -6px -6px 0 #091413;
+}
+
+.slc5 {
+    box-shadow: inset 0 -6px 0 #091413;
+}
+
+
+.slc6 {
+    box-shadow: inset -6px 0 0 #091413;
+}
+
+.slc7 {
+    box-shadow: inset -6px 0 0 #091413;
+}
+
+.slc8 {
+    box-shadow: inset 0 0 0 #091413;
+}
+    
+.op1 h4 {
+    color: #091413;
+}
+
+.option {
+    border-color: #091413;
+}
+
+.main {
+    color: #091413;
+}
+
+.content-y {
+    border-color: #091413;
+}
+
+.light {
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+.dark {
+   background-color: transparent;
+}
+
+}
+
 

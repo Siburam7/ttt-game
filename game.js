@@ -196,8 +196,9 @@ darkNav.addEventListener("click", () => {
 // back Button nav bar click Disign
 
 backBtn.addEventListener("click",()=> {
-    window.open("index.html");
+    window.location.href = "index.html";
 });
+   
 
 
 

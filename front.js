@@ -23,7 +23,7 @@ love.addEventListener("click", ()=> {
 });
 
 gameBtn.addEventListener("click",()=> {
-    window.open("game.html");
+    window.location.href = "game.html";
 });
 
 

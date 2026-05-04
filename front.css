@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #091413;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    color: #fff;
+}
+
+.heading-text {
+    margin: 5%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-weight: bolder; */
+    font-size: 27px;
+}
+
+.game-con {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 70%;
+    height: 45%;
+}
+
+.rating-bord {
+    margin-bottom: 10px;
+    height: 40px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.rating , .board{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 100%;
+    width: 50%;
+    gap: 5px;
+}
+
+.play-now {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A05A2;
+    border-radius: 30px;
+    gap: 10px;
+    transition: background-color 0.4s ease;
+}
+
+.play-now h2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.play-now:hover {
+    background-color: rgb(59, 59, 196);
+}
+
+    
+
+    
+
+.foot-line {
+    margin: 20px;
+    height: 35px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.like-nonlike {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 100%;
+    width: 40%;
+    /* background-color: rgb(60, 16, 101); */
+    border-radius: 30px;
+    gap: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 66%;
+    background-color: #021A54;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.non-like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 34%;
+    background-color: #021A54;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#like-after {
+    display: none;
+}
+
+.like.active #like-before {
+    display: none;
+}
+
+.like.active #like-after {
+    display: inline;
+}
+
+/* Dis like strt */
+
+#dis-like-after {
+    display: none;
+}
+
+.non-like.active #dis-like-before {
+    display: none;
+}
+
+.non-like.active #dis-like-after {
+    display: inline;
+}
+
+/* Love logo start here */
+#love-after {
+    display: none;
+}
+
+.fab-box.active #love-before {
+    display: none;
+}
+
+.fab-box.active #love-after {
+    display: inline;
+}
+
+
+
+.fab-box, .share-box, .feeedback-box {
+    height: 100%;
+    width: 16%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #021A54;
+    border-radius: 30px;
+}
+
+.img-boxx {
+    width: 90%;
+    height: 150px;
+    background-color: aqua;
+    border-radius: 15px;
+    background-image: url("TTT\ game\ image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 10px rgba(0,0,0,0.3);;
+}
+
+body {
+    background-image:
+      linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 5%, 
+      rgba(0,0,0,0.6) 100% 
+    ),
+    
+    url("background\ image\ tic\ tak\ toe.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+
+    
+}
+

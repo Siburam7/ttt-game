@@ -14,6 +14,7 @@ let optionNo = document.querySelector(".option-no");
 let darkNav = document.querySelector(".dark");
 let lightNav = document.querySelector(".light");
 let body = document.querySelector("body");
+let backBtn = document.querySelector(".boox-a1");
 
 
 let turnX = true;
@@ -191,6 +192,12 @@ lightNav.addEventListener("click", () => {
 darkNav.addEventListener("click", () => {
     body.classList.remove("bodyx");
 })
+
+// back Button nav bar click Disign
+
+backBtn.addEventListener("click",()=> {
+    window.open("front.html");
+});
 
 
 

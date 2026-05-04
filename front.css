@@ -26,8 +26,8 @@ body {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    width: 70%;
-    height: 45%;
+    width: 300px;
+    height: 400px;
 }
 
 .rating-bord {
@@ -63,8 +63,8 @@ body {
 
 .play-now h2 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
 }
+    
 
 .play-now:hover {
     background-color: rgb(59, 59, 196);
@@ -173,7 +173,6 @@ body {
 .img-boxx {
     width: 90%;
     height: 150px;
-    background-color: aqua;
     border-radius: 15px;
     background-image: url("TTT\ game\ image.png");
     background-size: cover;
@@ -195,8 +194,110 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
+}
     
 
     
+
+
+
+
+@media (min-width: 768px) {
+    .game-con {
+    width: 500px;
+    height: 600px;
+   }
+
+   .img-boxx {
+    height: 250px;
+    width: 90%;
+   }
+
+   .heading-text {
+    font-size: 45px;
+    margin: 0;
+   }
+
+   .rating-bord {
+    font-size: 20px;
+   }
+
+   .play-now {
+    height: 70px;
+    font-size: 25px;
+    gap: 30px;
+   }
+
+   .foot-line {
+    height: 50px;
+    margin: 0;
+   }
 }
 
+
+@media (min-width: 1024px) {
+    .game-con {
+    width: 350px;
+    height: 400px;
+   }
+
+   .img-boxx {
+    height: 150px;
+    width: 75%;
+   }
+
+   .heading-text {
+    font-size: 30px;
+    margin: 0;
+   }
+
+   .rating-bord {
+    font-size: 15px;
+   }
+
+   .play-now {
+    height: 45px;
+    font-size: 15px;
+    gap: 15px;
+   }
+
+   .foot-line {
+    height: 35px;
+    margin: 5px;
+   }
+}
+
+
+
+@media (min-width: 1280px) {
+   .game-con {
+    width: 500px;
+    height: 550px;
+   }
+
+   .img-boxx {
+    height: 220px;
+    width: 80%;
+   }
+
+   .heading-text {
+    font-size: 45px;
+    margin: 0;
+   }
+
+   .rating-bord {
+    font-size: 20px;
+   }
+
+   .play-now {
+    height: 60px;
+    font-size: 25px;
+    gap: 30px;
+   }
+
+   .foot-line {
+    height: 40px;
+    margin: 0px;
+   }
+ 
+} 

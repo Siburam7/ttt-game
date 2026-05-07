@@ -22,8 +22,12 @@ let menuClass = document.querySelector(".fa-gear");
 let leftAngular = document.querySelector(".fa-angle-left");
 let doorOpen = document.querySelector(".fa-door-open");
 
+let computer = document.querySelector(".select1");
+let duo = document.querySelector(".select2");
+
 
 let turnX = true;
+let gameMood = "duo";
 let count = 0;
 console.log(count);
 let cX = 0;
@@ -69,9 +73,47 @@ boxes.forEach((box) => {
 
         if (!checkWiner()) {
             countWin();
-}
+        }
+
+        if (gameMood === "computer" && turnX === false) {
+            setTimeout(() => {
+                computerMove();
+            },500);
+        }
     });
 });
+
+
+
+const computerMove = ()=> {
+    let emptyBox = [];
+
+    boxes.forEach((box,index) => {
+        if (box.innerText === "") {
+            emptyBox.push(index);
+        }
+    });
+
+
+    if (emptyBox.length === 0) return;
+
+
+    let randomIndex = emptyBox[Math.floor(Math.random()*emptyBox.length)];
+
+    boxes[randomIndex].innerText = "0";
+    boxes[randomIndex].style.color = "aqua";
+
+    turnX = true;
+
+    turnBox.innerText = "Your Turn";
+
+    count++;
+
+            
+}
+
+
+
 
 const checkWiner = () => {
     for (let winer of winPatterns) {
@@ -236,7 +278,38 @@ manuLogo.addEventListener("click", ()=> {
     menuClass.classList.add("manuLogo-rotate");
     
 });
-   
+
+
+
+//computer or duo selection hover 
+
+duo.classList.add("select-option");
+
+
+computer.addEventListener("click",()=> {
+
+    computer.classList.add("select-option");
+    duo.classList.remove("select-option");
+    resetGameX();
+
+    gameMood = "computer";
+
+});
+
+
+duo.addEventListener("click",()=> {
+ 
+    duo.classList.add("select-option");
+    computer.classList.remove("select-option");
+    resetGameX();
+
+    gameMode = "duo";
+
+});
+
+
+// End here computer or duo
+
 
 
 

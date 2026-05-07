@@ -15,6 +15,12 @@ let darkNav = document.querySelector(".dark");
 let lightNav = document.querySelector(".light");
 let body = document.querySelector("body");
 let backBtn = document.querySelector(".boox-a1");
+let manuMain = document.querySelector(".manu-option");
+let manuLogo = document.querySelector(".boox-a3");
+let menuClass = document.querySelector(".fa-gear");
+
+let leftAngular = document.querySelector(".fa-angle-left");
+let doorOpen = document.querySelector(".fa-door-open");
 
 
 let turnX = true;
@@ -193,10 +199,42 @@ darkNav.addEventListener("click", () => {
     body.classList.remove("bodyx");
 })
 
+
+
+
+
 // back Button nav bar click Disign
 
 backBtn.addEventListener("click",()=> {
-    window.location.href = "index.html";
+    leftAngular.classList.add("tr1");
+
+    doorOpen.classList.add("tr2");
+
+    setTimeout(()=> {
+        window.location.href = "index.html";
+    },300);
+    
+
+});
+
+// End here this box
+
+
+
+
+
+
+
+manuLogo.addEventListener("click", ()=> {
+
+    manuMain.classList.toggle("active");
+
+    menuClass.classList.remove("manuLogo-rotate");
+
+    void manuLogo.offsetWidth;
+
+    menuClass.classList.add("manuLogo-rotate");
+    
 });
    
 

@@ -25,6 +25,12 @@ let doorOpen = document.querySelector(".fa-door-open");
 let computer = document.querySelector(".select1");
 let duo = document.querySelector(".select2");
 
+let crazy = document.querySelector(".crazy");
+
+let ulId = document.querySelector(".ul-id");
+let brightness = document.querySelector("#brightness");
+let volume = document.querySelector("#volume");
+
 
 let turnX = true;
 let gameMood = "duo";
@@ -33,6 +39,7 @@ console.log(count);
 let cX = 0;
 let cTie = 0;
 let cO = 0;
+let light = "dark";
 
 
 
@@ -70,10 +77,8 @@ boxes.forEach((box) => {
         count++;
         console.log(count);
 
-
-        if (!checkWiner()) {
-            countWin();
-        }
+        checkWiner();
+        countWin();
 
         if (gameMood === "computer" && turnX === false) {
             setTimeout(() => {
@@ -100,7 +105,7 @@ const computerMove = ()=> {
 
     let randomIndex = emptyBox[Math.floor(Math.random()*emptyBox.length)];
 
-    boxes[randomIndex].innerText = "0";
+    boxes[randomIndex].innerText = "O";
     boxes[randomIndex].style.color = "aqua";
 
     turnX = true;
@@ -108,6 +113,9 @@ const computerMove = ()=> {
     turnBox.innerText = "Your Turn";
 
     count++;
+
+    checkWiner();
+    countWin();
 
             
 }
@@ -195,7 +203,6 @@ const resetGameX = () => {
     for (let box of boxes) {
         box.innerText = "";
         turnX = true;
-        gameOver = false;
         turnBox.innerText = "X Turn";
         count = 0;
     }
@@ -232,14 +239,57 @@ const countWin = () => {
 // light All background
 
 lightNav.addEventListener("click", () => {
+
     body.classList.add("bodyx");
-})
+
+    resetGame.style.backgroundColor = "#FB3640";
+
+    // old dark class remove
+    computer.classList.remove("select-option");
+    duo.classList.remove("select-option");
+
+    // selected item ko light class do
+    if (gameMood === "computer") {
+        computer.classList.add("select-option2");
+    } else {
+        duo.classList.add("select-option2");
+    }
+
+    light = "light";
+
+    crazy.classList.remove("h1-Adder");
+    crazy.classList.add("h1-Adder2");
+
+    
+
+});
 
 // dark all background
 
 darkNav.addEventListener("click", () => {
+
     body.classList.remove("bodyx");
-})
+
+    resetGame.style.backgroundColor = "#89E900";
+
+    // old light class remove
+    computer.classList.remove("select-option2");
+    duo.classList.remove("select-option2");
+
+    // selected item ko dark class do
+    if (gameMood === "computer") {
+        computer.classList.add("select-option");
+    } else {
+        duo.classList.add("select-option");
+    }
+
+    light = "dark";
+
+    crazy.classList.remove("h1-Adder2");
+    crazy.classList.add("h1-Adder");
+
+
+});
 
 
 
@@ -248,9 +298,19 @@ darkNav.addEventListener("click", () => {
 // back Button nav bar click Disign
 
 backBtn.addEventListener("click",()=> {
-    leftAngular.classList.add("tr1");
 
-    doorOpen.classList.add("tr2");
+    leftAngular.classList.remove("tr1");
+    leftAngular.classList.remove("tr1-1");
+    doorOpen.classList.remove("tr2");
+
+    if (light === "light") {
+        leftAngular.classList.add("tr1-1");
+        doorOpen.classList.add("tr2");
+    } else {
+        leftAngular.classList.add("tr1");
+        doorOpen.classList.add("tr2");
+    }
+
 
     setTimeout(()=> {
         window.location.href = "index.html";
@@ -271,11 +331,23 @@ manuLogo.addEventListener("click", ()=> {
 
     manuMain.classList.toggle("active");
 
+    menuClass.classList.remove("manuLogo-rotate2");
     menuClass.classList.remove("manuLogo-rotate");
 
-    void manuLogo.offsetWidth;
+    if (light === "light") {
 
-    menuClass.classList.add("manuLogo-rotate");
+        void manuLogo.offsetWidth;
+
+        menuClass.classList.add("manuLogo-rotate2");
+
+    } else {
+
+        void manuLogo.offsetWidth;
+
+        menuClass.classList.add("manuLogo-rotate");
+
+    }
+
     
 });
 
@@ -288,24 +360,46 @@ duo.classList.add("select-option");
 
 computer.addEventListener("click",()=> {
 
-    computer.classList.add("select-option");
-    duo.classList.remove("select-option");
-    resetGameX();
+    computer.classList.remove("select-option","select-option2");
+    duo.classList.remove("select-option","select-option2");
 
+    if (light === "dark") {
+
+        computer.classList.add("select-option");
+
+    } else {
+        computer.classList.add("select-option2");
+    }
+
+
+    resetGameX();
     gameMood = "computer";
 
 });
 
 
+
 duo.addEventListener("click",()=> {
- 
-    duo.classList.add("select-option");
-    computer.classList.remove("select-option");
+
+    duo.classList.remove("select-option","select-option2");
+    computer.classList.remove("select-option","select-option2");
+
+    if (light === "dark") {
+
+        duo.classList.add("select-option");
+
+    } else {
+
+        duo.classList.add("select-option2");
+
+    }
+
     resetGameX();
-
-    gameMode = "duo";
-
+    gameMood = "duo";
+ 
 });
+    
+
 
 
 // End here computer or duo

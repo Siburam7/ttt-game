@@ -536,6 +536,7 @@ body {
     text-shadow: 2px 2px 30px #89E900;
 }
 
+/* crazy Adder */
 
 .h1-Adder {
     color: #89E900;
@@ -547,6 +548,20 @@ body {
     color: #FB3640;
     text-shadow: 2px 2px 30px #FB3640;
 }
+
+/* crazy-h4 Adder */
+
+.h4-Adder {
+    color: #fff;
+    text-shadow: 2px 2px 30px white;
+}
+
+
+.h4-Adder2 {
+    color: black;
+    text-shadow: 2px 2px 30px black;
+}
+
 
 
 
@@ -671,6 +686,7 @@ body {
     color: #091413;
 
 
+
 .boox-a1, .boox-a2, .boox-a3 {
     background-color: #091413;
     color: #fff;
@@ -740,6 +756,8 @@ body {
 }
 
 }
+
+
 
 
 @media (min-width: 1024px) {

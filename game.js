@@ -26,6 +26,7 @@ let computer = document.querySelector(".select1");
 let duo = document.querySelector(".select2");
 
 let crazy = document.querySelector(".crazy");
+let crazyH4 = document.querySelector(".crazy-h4");
 
 let ulId = document.querySelector(".ul-id");
 let brightness = document.querySelector("#brightness");
@@ -260,6 +261,9 @@ lightNav.addEventListener("click", () => {
     crazy.classList.remove("h1-Adder");
     crazy.classList.add("h1-Adder2");
 
+    crazyH4.classList.remove("h4-Adder");
+    crazyH4.classList.add("h4-Adder2");
+
     
 
 });
@@ -287,6 +291,9 @@ darkNav.addEventListener("click", () => {
 
     crazy.classList.remove("h1-Adder2");
     crazy.classList.add("h1-Adder");
+
+    crazyH4.classList.remove("h4-Adder2");
+    crazyH4.classList.add("h4-Adder");
 
 
 });

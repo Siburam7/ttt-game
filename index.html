@@ -3,65 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tie Tak Toe Home</title>
+    <title>Rock-Paper-Scissors</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="front.css">
-    <script src="front.js" defer></script>
+    <link rel="stylesheet" href="rpc.css">
+    <script src="rpc.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="text-top">
+        <div class="img-top"></div>
+        <div class="img-buttom"></div>
 
-    <div class="game-con">
-        <div class="img-boxx"></div>
+        <!-- <div class="line-top"></div> -->
+    </div>
 
-        <h2 class="heading-text">Tic Tac Toe Online</h2>
-
-        <div class="rating-bord">
-            <div class="rating">
-                <i class="fa-solid fa-star-half-stroke"></i>
-                <h4>8.4/10</h4>
-            </div>
-
-            <div class="board">
-                <i class="fa-solid fa-chess-pawn"></i>
-                <h4>Board</h4>
-            </div>
-        </div>
-
-        <div class="play-now">
-            <i class="fa-solid fa-gamepad"></i>
-            <h2>Play now</h2>
-        </div>
-
-        <div class="foot-line">
-            <div class="like-nonlike">
-                <div class="like">
-                    <i  id="like-before" class="fa-regular fa-thumbs-up"></i>
-                    <i  id="like-after" class="fa-solid fa-thumbs-up"></i>
-                    <h4>24K</h4>
-                </div>
-                
-                <div class="non-like">
-                    <i id="dis-like-before"  class="fa-regular fa-thumbs-down"></i>
-                    <i  id="dis-like-after"  class="fa-solid fa-thumbs-down"></i>
+    <div class="nav">
+        <div class="score-bord-main">
+            <div class="score-bord humam">
+                <div class="box-x you-box">
+                    <h3>You</h3>
                 </div>
 
+                <div class="line"></div>
+
+                <div class="box-y you-text-box">
+                    <h2>5</h2>
+                </div>
             </div>
 
-            <div class="fab-box">
-                <i  id="love-before" class="fa-regular fa-heart"></i>
-                <i  id="love-after" class="fa-solid fa-heart"></i>
+            <div class="score-bord round">
+                <div class="round-text-box">
+                    <h2 id="Round-text">Round 1</h2>
+                </div>
             </div>
 
-            <div class="share-box">
-                <i class="fa-regular fa-share-from-square"></i>
+            <div class="score-bord ai">
+                <div class="box-x ai-box">
+                    <h3>AI</h3>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="box-y ai-text-box">
+                    <h2>1</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="main">
+        <div class="circle-comp-main">
+            <div class="cir-comp">
+                <div id="cir-comp-x"></div>
+                <h2>AI</h2>
+            </div>
+        </div>
+
+        <div class="gap-main">
+            <h1>VS</h1>
+        </div>
+
+        <div class="circle-user-main">
+            <div class="cir-main">
+                <div class="cir1">
+                    <div class="cir-x" id="rock-img"></div>
+                    <h2>Rock</h2>
+                </div>
+                <div class="cir1">
+                    <div class="cir-x" id="paper-img"></div>
+                    <h2>Paper</h2>
+                </div>
+                <div class="cir1">
+                    <div class="cir-x" id="scissors-img"></div>
+                    <h2>Scissors</h2>
+                </div>
             </div>
 
-            <div class="feeedback-box">
-                <i class="fa-regular fa-message"></i>
+        </div>
+    </div>
+
+    <div class="history">
+        <div class="round-box" id="round-1">
+            <div class="win-his">
+                <div class="color-win-his bord-1-his"></div>
+                <div class="win-lose-win-his">
+                    <h5>WIN</h5>
+                </div>
+            </div>
+
+            <div class="you-his">
+                <h5>YOU</h5>
+            </div>
+            <div class="you-img-his">
+                <div class="logo-img-his"></div>
+            </div>
+
+            <div class="Vs-his">
+                <h5>Vs</h5>
+            </div>
+
+            <div class="ai-img-his">
+                <div class="logo-img-his"></div>
+            </div>
+            <div class="ai-his">
+                <h5>AI</h5>
+            </div>
+
+            <div class="score-his">
+                <div class="score-inner-his bord-1-his">+1</div>
             </div>
 
 
         </div>
+        <div class="round-box" id="round-2">
+            <div class="win-his">
+                <div class="color-win-his bord-2-his"></div>
+                <div class="win-lose-win-his">
+                    <h5>LOSS</h5>
+                </div>
+            </div>
+
+            <div class="you-his">
+                <h5>YOU</h5>
+            </div>
+            <div class="you-img-his">
+                <div class="logo-img-his"></div>
+            </div>
+
+            <div class="Vs-his">
+                <h5>Vs</h5>
+            </div>
+
+            <div class="ai-img-his">
+                <div class="logo-img-his"></div>
+            </div>
+            <div class="ai-his">
+                <h5>AI</h5>
+            </div>
+
+            <div class="score-his">
+                <div class="score-inner-his bord-2-his">-1</div>
+            </div>
+        </div>
+        <div class="round-box" id="round-3">
+            <h5>Upcoming..</h5>
+        </div>
+        <div class="round-box" id="round-4"></div>
+        <div class="round-box" id="round-5"></div>
     </div>
 </body>
 </html>

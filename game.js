@@ -421,7 +421,10 @@ duo.addEventListener("click",()=> {
 
 
 
-
+let sum = {
+    sibu:"ram",
+    ramm:"sibu",
+}
 
 
 

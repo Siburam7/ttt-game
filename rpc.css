@@ -50,19 +50,22 @@ body {
     flex-direction: column;
     
 
-    background: linear-gradient(
-        180deg,
-        #020617,
-        #031525,
-        #041b35,
-        #020617
-    );
+   background: radial-gradient(circle at top left, #243b85 0%, transparent 35%),
+            linear-gradient(
+                180deg,
+                #1f2d6b 0%,
+                #4b148f 45%,
+                #641b9a 75%,
+                #a0155f 100%
+            );
+
+    /* background-repeat: no-repeat; */
 }
 
 
 .nav {
     height: 70px;
-    width: 90%;
+    width: min(90%, 420px);
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -74,20 +77,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
-    background: rgba(20, 35, 60, 0.45);
-
-    border: 2px solid rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(10px);
-
-    -webkit-backdrop-filter: blur(10px);
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 0 20px rgba(0,255,255,0.08),
-        inset 0 0 10px rgba(255,255,255,0.03);
 }
 
 .box-x {
@@ -137,8 +126,7 @@ body {
 
     color: #4DA8FF;
 
-    text-shadow:
-        0 0 10px rgba(0,255,213,0.6);
+    text-shadow: 0 0 8px #00bfff;
 }
 
 
@@ -155,30 +143,15 @@ body {
 
 
 .main {
-    height: 550px;
-    width: 90%;
+    min-height: 550px;
+    width: min(90%, 420px);
     margin: 25px;
-    background-color: #406AAF;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 2px;
 
-
-    background: rgba(20, 35, 60, 0.45);
-
-    border: 2px solid rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(10px);
-
-    -webkit-backdrop-filter: blur(10px);
-
-    border-radius: 25px;
-
-    box-shadow:
-        0 0 20px rgba(0,255,255,0.08),
-        inset 0 0 10px rgba(255,255,255,0.03);
 }
 
 /* .main:hover {
@@ -255,6 +228,8 @@ body {
 
 .cir-comp h2 {
     color: #C86BFF;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
 }
 
 .cir1 {
@@ -291,6 +266,13 @@ body {
         0 0 25px rgba(0,255,255,0.15);
 } */
 
+
+#rock-img,
+#paper-img,
+#scissors-img{
+    transition: 0.3s ease;
+}
+
 #rock-img {
     background-image: url('img/rock.rps.png');
     background-size:130%;
@@ -300,7 +282,6 @@ body {
 #rock-img:hover {
     transform: translateY(-5px) scale(1.05);
 
-    transition: 0.3s;
 
     box-shadow:
         0 0 25px rgba(0,255,150,0.25);
@@ -319,7 +300,6 @@ body {
 #paper-img:hover {
     transform: translateY(-5px) scale(1.05);
 
-    transition: 0.3s;
 
     box-shadow:
         0 0 25px rgba(0,180,255,0.25);
@@ -337,7 +317,6 @@ body {
 #scissors-img:hover {
     transform: translateY(-5px) scale(1.05);
 
-    transition: 0.3s;
 
     box-shadow:
         0 0 25px rgba(255,80,120,0.25);
@@ -355,30 +334,14 @@ body {
     color: white;
     
     height: 250px;
-    width: 90%;
+    width: min(90%, 420px);
     /* background-color: aquamarine; */
-    border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
     margin-bottom: 25px;
-
-    background: rgba(20, 35, 60, 0.45);
-
-    border: 2px solid rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(10px);
-
-    -webkit-backdrop-filter: blur(10px);
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 0 20px rgba(0,255,255,0.08),
-        inset 0 0 10px rgba(255,255,255,0.03);
-    
 }
 
 .round-box {
@@ -495,7 +458,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .bord-1-his {
@@ -535,5 +498,28 @@ body {
     width: 25px;
     background-color: blue;
     border-radius: 50%;
+}
+
+
+.glass{
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 2px solid rgba(255,255,255,0.18);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.35),
+    inset 0 1px 1px rgba(255,255,255,0.1);
+
+    border-radius: 15px;
+}
+
+
+#made-button {
+    color: #eaf4ff82;
+    padding-bottom: 10px;
+    font-size: 10px;
 }
 

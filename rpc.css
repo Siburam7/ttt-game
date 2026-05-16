@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Josefin";
+    src: url('Font/JosefinSans-VariableFont_wght.ttf')
+}
 
 
 * {
@@ -72,6 +76,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
 }
 
 .box-x {
@@ -86,11 +91,14 @@ body {
 
 .box-x h3 {
    color: #7f8da3;
+   font-family: "Josefin";
 }
 
 .box-y h2 {
     color: white;
     font-size: 30px;
+
+    font-family: "Josefin";
 }
 
 
@@ -137,7 +145,7 @@ body {
 
 
 .main {
-    min-height: 450px;
+    min-height: 400px;
     width: min(90%, 420px);
     margin: 25px;
     display: flex;
@@ -162,8 +170,9 @@ body {
     width: 100%;
     /* background-color: blue; */
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 
 .circle-user-main {
@@ -177,7 +186,7 @@ body {
 
 .gap-main {
     height: 20%;
-    width: 100%;
+    width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,32 +200,55 @@ body {
 }
 
 .gap-main h1 {
-    font-size: 42px;
-    font-family:  'Press Start 2P';
+    font-size: 32px;
+    font-family: "Josefin";
     padding: 10px;
     color: white;
+
+    text-shadow: 0 0 15px #ffffff;
 }
 
 .cir-comp {
-    height: 200px;
-    width: 175px;
+    height: 145px;
+    width: 145px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
     gap: 5px;
-    padding: 10px;
 }
 
 #cir-comp-x {
-    height: 145px;
-    width: 145px;
+    height: 115px;
+    width: 115px;
     border-radius: 50%;
-    margin: 5px;
-
+    border: 3px solid rgba(255,255,255,0.18);
     background-image: url('img/Final-AI-logo-removebg-preview.png');
-    background-size:160%;
+    background-size:100%;
     background-position: center;
+
+}
+
+.reset-game-box {
+    height: 20px;
+    width: min(90%, 420px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.reset-game-box a {
+    color: #eaf4ff82;
+    padding-inline: 10px;
+    font-family: "Josefin";
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 12px;
+
+}
+
+.reset-game-box a:hover {
+    color: #EAF4FF;
 }
 
 /* .cir-comp h2 {
@@ -226,7 +258,7 @@ body {
 
 .cir1 {
     height: 180px;
-    width: 110px;
+    width: 30%;
     margin: 5px;
     display: flex;
     align-items: center;
@@ -236,8 +268,8 @@ body {
 }
 
 .cir-x {
-    height: 105px;
-    width: 105px;
+    min-height: 105px;
+    min-width: 105px;
     
 
     background: rgba(255,255,255,0.05);
@@ -251,12 +283,11 @@ body {
 
 .cir1 h2 {
     font-size: 15px;
+    font-family: "Josefin";
+
+    text-shadow: 0 0 15px #ffffff;
 }
 
-#ai-text,
-.cir1 h2 {
-    font-family: 'Orbitron', sans-serif;
-}
 
 
 /* .cir-x:hover {
@@ -344,6 +375,8 @@ body {
     justify-content: space-evenly;
     flex-direction: column;
     margin-bottom: 25px;
+
+    font-family: "Josefin";
 }
 
 .round-box {
@@ -523,5 +556,8 @@ body {
     color: #eaf4ff82;
     padding-bottom: 10px;
     font-size: 10px;
+
+    font-family: "Josefin";
+    font-weight: normal;
 }
 

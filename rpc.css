@@ -166,13 +166,16 @@ body {
 } */
 
 .circle-comp-main {
-    height: 40%;
+    height: 60%;
     width: 100%;
     /* background-color: blue; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+
+    color: #EAF4FF;
+    text-shadow: 0 0 15px #ffffff;
 }
 
 .circle-user-main {
@@ -182,6 +185,10 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
+}
+
+#ai-text {
+    color: #00F5FF;
 }
 
 .gap-main {
@@ -209,8 +216,8 @@ body {
 }
 
 .cir-comp {
-    height: 145px;
-    width: 145px;
+    height: 170px;
+    width: 170px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -223,11 +230,33 @@ body {
     width: 115px;
     border-radius: 50%;
     border: 3px solid rgba(255,255,255,0.18);
-    background-image: url('img/Final-AI-logo-removebg-preview.png');
+}
+
+#cir-comp-y {
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.18);
+}
+
+.human-choice-rock {
+    background-image: url('img/rock.rps.png');
     background-size:100%;
     background-position: center;
-
 }
+
+.human-choice-paper {
+    background-image: url('img/paper.rps.png');
+    background-size:100%;
+    background-position: center;
+}
+
+.human-choice-scissors {
+    background-image: url('img/scissors.rps.png');
+    background-size:100%;
+    background-position: center;
+}
+
 
 .reset-game-box {
     height: 20px;

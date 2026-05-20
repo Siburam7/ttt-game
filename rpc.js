@@ -60,6 +60,9 @@ let bordHis4 = document.querySelector(".bord-5-hisX");
 
 let buttomText = document.querySelector("#made-button");
 
+let aiText = document.querySelector("#cir-comp-x-text");
+let yourText = document.querySelector("#cir-comp-y-text");
+
 let gameRound = 0;
 let lastRound = 5;
 let win = 0;
@@ -147,21 +150,60 @@ function playGame(player) {
   console.log(ai);
   spinAnimation(ai);
 
+  if (player=== 1) {
+    ChoiceImage.classList.remove(
+      "human-choice-scissors",
+      "human-choice-paper",
+    );
+
+    ChoiceImage.classList.add("human-choice-rock");
+
+    yourText.innerText = "Rock";
+  }  else if (player === 2) {
+    ChoiceImage.classList.remove(
+      "human-choice-scissors",
+      "human-choice-rock",
+    );
+
+    ChoiceImage.classList.add("human-choice-paper");
+    yourText.innerText = "Paper";
+  } else {
+    ChoiceImage.classList.remove(
+      "human-choice-paper",
+      "human-choice-rock",
+    );
+
+    ChoiceImage.classList.add("human-choice-scissors");
+    yourText.innerText = "Scissors";
+  }
+
+
+  let countXX = 1;
+
+  let thinkingAnimation = setInterval(() => {
+
+    aiText.innerText = "AI is thinking" + ".".repeat(countXX);
+
+     countXX++;
+
+    if (countXX > 3) {
+      countXX = 1;
+   }
+
+  }, 500);
+
+
+
+
+
   setTimeout(() => {
     checkResult(player, ai);
 
-    if (winLoss === "draw") {
-      return;
-    }
+    // if (winLoss === "draw") {
+    //   return;
+    // }
 
     if (player === 1) {
-      ChoiceImage.classList.remove(
-        "human-choice-scissors",
-        "human-choice-paper",
-      );
-
-      ChoiceImage.classList.add("human-choice-rock");
-
       yourImg[countX].classList.remove(
         "human-choice-rock",
         "human-choice-paper",
@@ -170,10 +212,6 @@ function playGame(player) {
 
       yourImg[countX].classList.add("human-choice-rock");
     } else if (player === 2) {
-      ChoiceImage.classList.remove("human-choice-rock");
-      ChoiceImage.classList.remove("human-choice-scissors");
-      ChoiceImage.classList.add("human-choice-paper");
-
       yourImg[countX].classList.remove(
         "human-choice-rock",
         "human-choice-paper",
@@ -182,9 +220,6 @@ function playGame(player) {
 
       yourImg[countX].classList.add("human-choice-paper");
     } else {
-      ChoiceImage.classList.remove("human-choice-rock");
-      ChoiceImage.classList.remove("human-choice-paper");
-      ChoiceImage.classList.add("human-choice-scissors");
 
       yourImg[countX].classList.remove(
         "human-choice-rock",
@@ -193,6 +228,7 @@ function playGame(player) {
       );
 
       yourImg[countX].classList.add("human-choice-scissors");
+
     }
 
     if (ai === 1) {
@@ -203,6 +239,9 @@ function playGame(player) {
       );
 
       aiImg[countX].classList.add("human-choice-rock");
+
+      aiText.innerText = "Rock";
+      
     } else if (ai === 2) {
       aiImg[countX].classList.remove(
         "human-choice-rock",
@@ -211,6 +250,9 @@ function playGame(player) {
       );
 
       aiImg[countX].classList.add("human-choice-paper");
+
+      aiText.innerText = "Paper";
+
     } else {
       aiImg[countX].classList.remove(
         "human-choice-rock",
@@ -219,6 +261,8 @@ function playGame(player) {
       );
 
       aiImg[countX].classList.add("human-choice-scissors");
+
+      aiText.innerText = "Scissors";
     }
   }, 1500);
 }

@@ -189,7 +189,7 @@ body {
 }
 
 .gap-main h1 {
-  font-size: 32px;
+  font-size: 35px;
   font-family: "Josefin";
   padding: 10px;
   color: white;
@@ -540,10 +540,111 @@ body {
   font-weight: normal;
 }
 
-#round-1,
-#round-2,
-#round-3,
-#round-4,
-#round-5 {
+.round-1 {
   display: none;
+}
+
+
+.option-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  flex-direction: column;
+}
+
+.text-massage {
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-massage h2 {
+  font-size: 35px;
+  font-family: "Press Start 2P";
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 10px #ffffff,
+    0 0 20px #c86bff,
+    0 0 35px #ff4fd8;
+
+  letter-spacing: 2px;
+
+  animation: glowWin 1.2s infinite alternate;
+}
+
+.play-next-main {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-next-button {
+  height: 45px;
+  width: 180px;
+  background: linear-gradient(
+    135deg,
+    rgba(138, 0, 255, 0.35),
+    rgba(255, 0, 111, 0.25)
+  );
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 0 18px rgba(138, 0, 255, 0.25),
+    0 0 25px rgba(255, 0, 111, 0.18);
+
+  transition: 0.3s ease;
+
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+.play-next-button:hover {
+    transform:scale(1.01);
+
+  background: linear-gradient(
+    135deg,
+    rgba(138, 0, 255, 0.5),
+    rgba(255, 0, 111, 0.4)
+  );
+
+  box-shadow:
+    0 0 25px rgba(138, 0, 255, 0.45),
+    0 0 35px rgba(255, 0, 111, 0.35);
+
+}
+
+.play-next-button h2 {
+  color: rgba(255, 255, 255, 0.50);
+  font-family: "Josefin";
+  transition: transform 0.2s ease;
+
+  font-size: 15px;
+}
+
+.option-main {
+  display: none;
+} 
+
+
+#cir-comp-x-text,
+#cir-comp-y-text {
+  font-size: 19px;
+  font-family: "Josefin";
+  font-weight:900;
+
+   color: #FFFFFF;
+   text-shadow: 0 0 10px rgba(255,255,255,0.8);
 }
